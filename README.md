@@ -1,4 +1,4 @@
-# the-shop
+# The shop
 
 A Laravel restful shop
 
