@@ -2,6 +2,7 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -18,7 +19,7 @@ use Illuminate\Support\Facades\Route;
  */
 Route::prefix('user')->group(function () {
 
-    Route::group(['middleware' => [ 'auth:api' ] ], function () {
+    Route::group(['middleware' => [ 'auth.api.headers', 'auth:api' ] ], function () {
 
         Route::post('details', 'API\User\AuthController@details');
 
@@ -31,7 +32,7 @@ Route::prefix('auth')->group(function () {
     Route::post('login', 'API\User\AuthController@login');
     Route::post('register', 'API\User\AuthController@register');
 
-    Route::group(['middleware' => [ 'auth:api' ] ], function () {
+    Route::group(['middleware' => [ 'auth.api.headers', 'auth:api' ] ], function () {
 
         Route::post('check', 'API\User\AuthController@check');
 
