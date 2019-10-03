@@ -6,7 +6,7 @@ A Laravel restful shop
 
 **Updates and versions**
 
-*  Outh 2.0
+*  ✅ OAuth 2.0
 
 *  Simplest shop ever. Only Product, Cart and Order models and endpoints
 
